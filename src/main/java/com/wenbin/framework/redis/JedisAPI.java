@@ -1,6 +1,8 @@
-package com.wenbin.framework;
+package com.wenbin.framework.redis;
 
 import java.util.Properties;
+
+import com.wenbin.framework.util.PropertiesUtil;
 
 
 import redis.clients.jedis.Jedis;

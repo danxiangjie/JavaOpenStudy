@@ -1,4 +1,4 @@
-package com.wenbin.framework;
+package com.wenbin.framework.util;
 
 
 import java.io.IOException;
