@@ -9,7 +9,7 @@ import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
-public class JedisAPI {
+public class GetJedisSafeLy {
 	
 	private static  String configName="JedisConfig.properties";
 	public static String getConfigName() {
@@ -17,7 +17,7 @@ public class JedisAPI {
 	}
 
 	public static void setConfigName(String configName) {
-		JedisAPI.configName = configName;
+		GetJedisSafeLy.configName = configName;
 	}
 
 	private static JedisPool pool=null;

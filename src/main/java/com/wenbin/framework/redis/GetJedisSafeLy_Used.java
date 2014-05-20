@@ -4,7 +4,7 @@ import redis.clients.jedis.Jedis;
 /*
  *  安全获取Jedis实例的工具类
  */
-public class JedisInvocationContextImpl {
+public class GetJedisSafeLy_Used {
 	/*
 	 * 使用ThreadLocal类来保证获取到的Jedis的独立性，通过内部封装的JedisStatus来保证当前线程 只可取的一次Jedis实例
 	 */
