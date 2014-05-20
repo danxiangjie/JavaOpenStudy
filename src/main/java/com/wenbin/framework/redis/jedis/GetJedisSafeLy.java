@@ -1,4 +1,4 @@
-package com.wenbin.framework.redis;
+package com.wenbin.framework.redis.jedis;
 
 import java.util.Properties;
 
