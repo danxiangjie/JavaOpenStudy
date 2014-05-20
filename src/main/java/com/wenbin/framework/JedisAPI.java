@@ -1,8 +1,7 @@
-package com.whaty.framework.jedis;
+package com.wenbin.framework;
 
 import java.util.Properties;
 
-import com.whaty.framework.util.PropertiesUtil;
 
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;

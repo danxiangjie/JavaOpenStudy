@@ -1,4 +1,4 @@
-package com.whaty.framework.jedis;
+package com.wenbin.framework;
 
 import redis.clients.jedis.Jedis;
 /*

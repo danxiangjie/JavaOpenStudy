@@ -1,4 +1,4 @@
-package com.whaty.framework.util;
+package com.wenbin.framework;
 
 
 import java.io.IOException;
