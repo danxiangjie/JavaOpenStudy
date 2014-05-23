@@ -64,7 +64,6 @@ public class GetJedisSafeLy {
 		if(null!=j){
 		    j.set("1", "wenbin");
 		    System.out.println(j.get("1"));
-//		            Ïú»ÙjedisÊµÀı
 		    returnJedis(j);   
 		}
 	}

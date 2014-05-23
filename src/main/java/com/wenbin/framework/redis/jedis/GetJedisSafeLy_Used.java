@@ -2,15 +2,15 @@ package com.wenbin.framework.redis.jedis;
 
 import redis.clients.jedis.Jedis;
 /*
- *  °²È«»ñÈ¡JedisÊµÀıµÄ¹¤¾ßÀà
+ *  ï¿½ï¿½È«ï¿½ï¿½È¡JedisÊµï¿½ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½ï¿½
  */
 public class GetJedisSafeLy_Used {
 	/*
-	 * Ê¹ÓÃThreadLocalÀàÀ´±£Ö¤»ñÈ¡µ½µÄJedisµÄ¶ÀÁ¢ĞÔ£¬Í¨¹ıÄÚ²¿·â×°µÄJedisStatusÀ´±£Ö¤µ±Ç°Ïß³Ì Ö»¿ÉÈ¡µÄÒ»´ÎJedisÊµÀı
+	 * é¦–å…ˆé€šè¿‡jedis poolï¼Œè·å–ä¸€ä¸ªjedis å®ä¾‹ï¼Œç„¶å è°ƒç”¨æ­¤ç±»ä¸­çš„setJedisï¼ˆï¼‰æ–¹æ³•ï¼Œç„¶åå†ä½¿ç”¨getJedisï¼ˆï¼‰æ–¹æ³•ï¼Œè·å–jediså®ä¾‹é‡Œï¼Œå®Œæˆåç»­çš„å¤„ç†
 	 */
 	private ThreadLocal<JedisStatus> threadLocal = new ThreadLocal<JedisStatus>();
 /*
- * »ñÈ¡JedisÊµÀı
+ * ï¿½ï¿½È¡JedisÊµï¿½ï¿½
  */
 	public Jedis getJedis() {
 		JedisStatus jedisStatus = this.threadLocal.get();
@@ -25,7 +25,7 @@ public class GetJedisSafeLy_Used {
 		return jedisStatus.getJedis();
 	}
 /*
- * ÉèÖÃJedis
+ * ï¿½ï¿½ï¿½ï¿½Jedis
  */
 	public void setJedis(Jedis jedis) {
 		JedisStatus jedisStatus = new JedisStatus();
@@ -35,7 +35,7 @@ public class GetJedisSafeLy_Used {
 	}
 
 	/*
-	 * ÄÚ²¿Àà
+	 * ï¿½Ú²ï¿½ï¿½ï¿½
 	 */
 	private static class JedisStatus {
 		private boolean used;

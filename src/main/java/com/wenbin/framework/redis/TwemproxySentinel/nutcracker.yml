@@ -1,0 +1,13 @@
+﻿alpha:
+  listen: 192.168.20.103:22121
+  hash: fnv1a_64
+  distribution: ketama
+  preconnect: true
+  auto_eject_hosts: false
+  redis: true
+  backlog: 512
+  server_connections: 1
+  server_retry_timeout: 2000
+  server_failure_limit: 2
+  servers:
+   -  192.168.20.103:6390:1 server1
