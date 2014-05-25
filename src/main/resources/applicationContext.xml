@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:aop="http://www.springframework.org/schema/aop" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jee="http://www.springframework.org/schema/jee" xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:task="http://www.springframework.org/schema/task"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.2.xsd http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.2.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd http://www.springframework.org/schema/jee http://www.springframework.org/schema/jee/spring-jee-3.2.xsd http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-3.2.xsd http://www.springframework.org/schema/task http://www.springframework.org/schema/task/spring-task-3.2.xsd">
+
+
+
+	<!--  <aop:aspectj-autoproxy /> -->
+	
+	<!-- proxy-target-class默认值为false，基于接口的代理(jdk)，否则是基于类的代理(cglib) -->
+	<aop:aspectj-autoproxy proxy-target-class="true" />
+	<aop:config proxy-target-class="true" />
+	
+	
+	<bean id="simpleServiceBean"
+		class="com.javacodegeeks.snippets.enterprise.impl.SimpleServiceImpl">
+		<property name="name" value="Hello" />
+		<property name="id" value="12345" />
+	</bean>
+
+	<!-- <bean id="doAroundAspect" class="com.javacodegeeks.snippets.enterprise.DoAroundAspect" 
+		/> -->
+
+	<!-- WhatyCache基础缓存服务 -->
+	<bean id="cacheService"
+		class="com.whaty.framework.cache.core.service.impl.DefaultRedisService">
+		<property name="redisConfigPath" value="redis.properties" />
+	</bean> <!---->
+	<!-- WhatyCache注解缓存拦截器 -->  <!-- factory-method="aspectOf" -->
+	<bean id="cacheAspect" class="com.whaty.framework.cache.aopcache.aop.CacheAspect">
+		
+		<property name="cacheService" ref="cacheService" />
+	</bean>
+	 <!--<bean id="dangaMemcachedManager" class="com.whaty.core.common.mmcache.DangaMemcachedManager"></bean> -->
+
+</beans>
