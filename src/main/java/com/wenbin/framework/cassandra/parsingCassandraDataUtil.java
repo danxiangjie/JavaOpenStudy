@@ -1,4 +1,4 @@
-package com.canssandra;
+package com.wenbin.framework.cassandra;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;

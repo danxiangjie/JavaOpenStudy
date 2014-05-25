@@ -42,6 +42,13 @@
 			<artifactId>jedis</artifactId>
 			<version>2.4.2</version>
 		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.hadoop</groupId>
+			<artifactId>zookeeper</artifactId>
+			<version>3.3.1</version>
+		</dependency>
+		
 
 		<dependency>
 			<groupId>org.freemarker</groupId>
@@ -81,6 +88,31 @@
 			<artifactId>cassandra-all</artifactId>
 			<version>2.1.0-beta2</version>
 		</dependency>
+		
+		
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-aop</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+ 			<groupId>org.springframework</groupId>
+			<artifactId>spring-expression</artifactId>
+			<version>${spring.version}</version>
+	  </dependency>
 	</dependencies>
 	
+	<properties>
+		<spring.version>3.0.5.RELEASE</spring.version>
+	</properties>
 </project>
